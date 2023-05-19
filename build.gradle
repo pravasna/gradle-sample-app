@@ -1,14 +1,16 @@
 plugins {
-	id 'org.springframework.boot' version '2.1.4.RELEASE'
-	id 'java'
-	id "org.sonarqube" version "3.3"
+	id 'org.springframework.boot' version '3.1.0'
+	id 'java-library'
+	id "org.sonarqube" version "3.4.0.2513"
 }
 
 apply plugin: 'io.spring.dependency-management'
 
 group = 'io.codefresh'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
 
 repositories {
 	mavenCentral()
@@ -18,10 +20,10 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'junit:junit:4.13.2'
 }
 
 test {
     useJUnit()
-
     maxHeapSize = '1G'
 }
