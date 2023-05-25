@@ -35,4 +35,3 @@ There is also a [codefresh.yml](codefresh.yml) for easy usage with the [Codefres
 For the simple packaging pipeline see [codefresh-package-only.yml](codefresh-package-only.yml)
 
 More details can be found in [Codefresh documentation](https://codefresh.io/docs/docs/learn-by-example/java/gradle/)
-
